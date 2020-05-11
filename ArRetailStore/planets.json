@@ -1,0 +1,320 @@
+{
+"sections": [{
+        "title": "TrendingSpecials",
+        "sort_order": "1",
+        "type": "general",
+        "items": [{
+                "sort_order": "1",
+                "type": "product",
+                "parameter": {
+                    "entity_id": "14",
+                    "name": "Glasses",
+                    "image_url": "ic_yellow_glasses",
+                    "price":"20100",
+                    
+                   
+                    
+                }
+            },
+            {
+                "sort_order": "2",
+                "type": "general",
+                "parameter": {
+                    "entity_id": "238",
+                    "name": "Table Fan",
+                    "image_url": "ic_fan",
+                       "price":"10100"
+                     
+                }
+            },
+            {
+                "sort_order": "4",
+                "type": "general",
+                "parameter": {
+                    "entity_id": "141",
+                    "name": "Wardrobe",
+                    "image_url": "ic_furniture_10",
+                       "price":"10100"
+                     
+                }
+            },
+            {
+                "sort_order": "4",
+                "type": "general",
+                "parameter": {
+                    "entity_id": "141",
+                    "name": "Headphones",
+                    "image_url": "ic_electronics_3",
+                       "price":"10100"
+                    
+                }
+            },
+            {
+                "sort_order": "7",
+                "type": "general",
+                "parameter": {
+                    "entity_id": "18",
+                    "name": "Laptop with AMD",
+                    "image_url": "ic_electronics_6",
+                       "price":"10100"
+                     
+                }
+            },{
+                "sort_order": "7",
+                "type": "general",
+                "parameter": {
+                    "entity_id": "18",
+                    "name": "Iphone 11 pro",
+                    "image_url": "ic_electronics_6",
+                       "price":"10100"
+                   
+                }
+            },
+            {
+                      "sort_order": "7",
+                      "type": "general",
+                      "parameter": {
+                          "entity_id": "18",
+                          "name": "Google Pixel 3a",
+                          "image_url": "ic_electronics_7",
+                             "price":"10100"
+                           
+                      }
+                  }
+        ]
+    },
+   
+    {
+        "title": "Furniture",
+        "sort_order": "2",
+        "type": "general",
+        "items": [{
+            "sort_order": "1",
+            "type": "product",
+            "parameter": {
+                "entity_id": "14",
+                "name": "Sofa set",
+                "image_url": "ic_furniture_1",
+                   "price":"10100"
+                
+            }
+        },
+        {
+            "sort_order": "2",
+            "type": "general",
+            "parameter": {
+                "entity_id": "238",
+                "name": "Sofa Chair Blue",
+                "image_url": "ic_furniture_2",
+                   "price":"10100"
+                  
+            }
+        },
+        {
+            "sort_order": "3",
+            "type": "general",
+            "parameter": {
+                "entity_id": "15",
+                "name": "Dining Table",
+                "image_url": "ic_furniture_4",
+                   "price":"10100"
+                 
+            }
+        },
+        {
+            "sort_order": "4",
+            "type": "general",
+            "parameter": {
+                "entity_id": "141",
+                "name": "Wardrobe",
+                "image_url": "ic_furniture_10",
+                   "price":"10100"
+                
+            }
+        },
+        {
+            "sort_order": "7",
+            "type": "general",
+            "parameter": {
+                "entity_id": "18",
+                "name": "Study table",
+                "image_url": "ic_furniture_11",   "price":"10100"
+                 
+            }
+        },
+        {
+            "sort_order": "7",
+            "type": "general",
+            "parameter": {
+                "entity_id": "18",
+                "name": "Iphone 11 pro",
+                "image_url": "ic_electronics_6",
+                   "price":"10100"
+               
+            }
+        },
+        {
+                  "sort_order": "7",
+                  "type": "general",
+                  "parameter": {
+                      "entity_id": "18",
+                      "name": "Google Pixel 3a",
+                      "image_url": "ic_electronics_7",
+                         "price":"10100"
+                      
+                  }
+              }
+        ]
+    },
+    
+    
+    {
+        "title": "Fashion",
+        "sort_order": "2",
+        "type": "general",
+        "items": [{
+            "sort_order": "1",
+            "type": "product",
+            "parameter": {
+                "entity_id": "14",
+                "name": "T shirt",
+                "image_url": "ic_fashion_1",
+                   "price":"10100"
+                 
+            }
+        },
+        {
+            "sort_order": "2",
+            "type": "general",
+            "parameter": {
+                "entity_id": "238",
+                "name": "Brown Formal",
+                "image_url": "ic_fashion_11",
+                   "price":"10100"
+                 
+            }
+        },
+        {
+            "sort_order": "3",
+            "type": "general",
+            "parameter": {
+                "entity_id": "15",
+                "name": "Black and white",
+                "image_url": "ic_fashion_13",
+                   "price":"10100"
+                
+            }
+        },
+        {
+            "sort_order": "4",
+            "type": "general",
+            "parameter": {
+                "entity_id": "141",
+                "name": "Green shoes",
+                "image_url": "ic_fashion_14",
+                   "price":"10100"
+                
+                            }
+        },
+        {
+            "sort_order": "7",
+            "type": "general",
+            "parameter": {
+                "entity_id": "18",
+                "name": "Shoes in orange",
+                "image_url": "ic_fashion_15",
+                   "price":"10100"
+               
+            }
+        },
+        {
+                  "sort_order": "7",
+                  "type": "general",
+                  "parameter": {
+                      "entity_id": "18",
+                      "name": "Dress Flower",
+                      "image_url": "ic_fashion_20",
+                         "price":"10100"
+                     
+                  }
+              }
+        ]
+    },
+    {
+        "title": "Electronics",
+        "sort_order": "2",
+        "type": "general",
+        "items": [{
+            "sort_order": "1",
+            "type": "product",
+            "parameter": {
+                "entity_id": "14",
+                "name": "Table Fan",
+                "image_url": "ic_fan",
+                   "price":"10100"
+             
+            }
+        },
+        {
+            "sort_order": "2",
+            "type": "general",
+            "parameter": {
+                "entity_id": "238",
+                "name": "Laptop with AMD",
+                "image_url": "ic_electronics_2",   "price":"10100"
+                 
+            }
+        },
+        {
+            "sort_order": "3",
+            "type": "general",
+            "parameter": {
+                "entity_id": "15",
+                "name": "Microwave",
+                "image_url": "ic_microwave",
+                   "price":"10100"
+                  
+            }
+        },
+        {
+            "sort_order": "4",
+            "type": "general",
+            "parameter": {
+                "entity_id": "141",
+                "name": "Laptop with Intel",
+                "image_url": "ic_electronics_4",
+                   "price":"10100"
+                 
+            }
+        },
+        {
+            "sort_order": "7",
+            "type": "general",
+            "parameter": {
+                "entity_id": "18",
+                "name": "Iphone 11 pro",
+                "image_url": "ic_electronics_6",
+                  "price":"2000"
+            }
+        },
+        {
+                  "sort_order": "7",
+                  "type": "general",
+                  "parameter": {
+                      "entity_id": "18",
+                      "name": "Google Pixel 3a",
+                      "image_url": "ic_electronics_7",
+                         "price":"11100"
+                        
+                  }
+              }
+        ]
+    }
+           
+            ]
+        
+        
+}
+    
+
+
