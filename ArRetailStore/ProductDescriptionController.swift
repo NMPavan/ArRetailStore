@@ -34,13 +34,27 @@ class ProductDescriptionController: UISliderNavigationController {
     }
     
     
-    @IBAction func SceneView(_ sender: Any) {
+    
+    @IBAction func ScallingWindow(_ sender: Any) {
         
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SceneKit") as? SceneViewController
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "Scalling") as? Scalling360ViewModel
         self.navigationController?.pushViewController(vc!, animated: true)
         print("it is inside scenekit")
         
+    }
+    
+    
+    @IBAction func RotationWindow(_ sender: Any) {
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SceneKit") as? SceneViewController
+               self.navigationController?.pushViewController(vc!, animated: true)
+               print("it is inside scenekit")
+               
+               
+    }
+    
+    @IBAction func SceneView(_ sender: Any) {
         
+       
         
         
         

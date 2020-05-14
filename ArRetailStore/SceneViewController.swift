@@ -11,15 +11,18 @@ import SceneKit
 
 class SceneViewController: UIViewController {
     var selectedPost: ProductModel!
+    
+     var ship = SCNNode()
+     let scene = SCNScene()
 
     @IBOutlet weak var sceneview: SCNView!
     override func viewDidLoad() {
         super.viewDidLoad()
-         // 1: Load .obj file
-             let scene = SCNScene()
-            // let node = SCNNode()
+                    // 1: Load .obj file
+                   
+                    // let node = SCNNode()
          
-            let cameraNode = SCNNode()
+                    let cameraNode = SCNNode()
                     cameraNode.camera = SCNCamera()
                     scene.rootNode.addChildNode(cameraNode)
                     
@@ -55,18 +58,15 @@ class SceneViewController: UIViewController {
         
         
                     
-        let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(from:)))
-        self.sceneview.addGestureRecognizer(pinchGestureRecognizer)
+      
         
         // ******************************************************
 
-        let ship = nodeFromResource(assetName: "shipFolder/CruzV2", extensionName: "usdz")
+        ship = nodeFromResource(assetName: "shipFolder/CruzV2", extensionName: "usdz")
         scene.rootNode.addChildNode(ship)
-        addAnimation(node: ship)
+        //addAnimation(node: ship)
         
-        let tapGestureForWait = UITapGestureRecognizer(target: self, action: #selector(handleTap1(_:)))
-        sceneview.addGestureRecognizer(tapGestureForWait)
-        
+       
         let text = SCNText(string: "Adidas", extrusionDepth: 1.0)
         text.firstMaterial?.diffuse.contents = UIColor.black
         
@@ -97,79 +97,43 @@ class SceneViewController: UIViewController {
 //        bluePotion.position = SCNVector3Make(2, 1, 1)
 //        scene.rootNode.addChildNode(bluePotion)
 //        addAnimation(node: bluePotion)
-
-        
-        
-        
-        
-        //MARK:- This is for wait
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap1(_:)))
-        tap.delegate = self as? UIGestureRecognizerDelegate
-        sceneview.isUserInteractionEnabled = true
-        sceneview.addGestureRecognizer(tap)
-        
-       
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+               sceneview.addGestureRecognizer(tapGesture)
         }
     
     
     
-
-    @objc func handleTap1(_ gestureRecognize: UIGestureRecognizer) {
-          print("it will wait for 2 sec")
-          
-        SCNAction.wait(duration: 0.25)
-          
-      }
-   @objc func handleTap(_ sender: UITapGestureRecognizer? = nil) {
-      print("it will wait for 3 sec")
-   SCNAction.wait(duration: 10.0)
+ 
     
+    
+    @IBAction func StartRotation(_ sender: Any) {
+        let rotateOne = SCNAction.rotate(by: 50.0, around: SCNVector3(0.0, 10.0,0.0), duration: 20)
+         let waitAction = SCNAction.wait(duration: 5)
+         let hoverSequence = SCNAction.sequence([rotateOne,waitAction,rotateOne])
+         let loopSequence = SCNAction.repeatForever(hoverSequence)
+        ship.runAction(loopSequence)
+       
+     
+       
+      
     }
+    
+    @IBAction func StopAnimation(_ sender: Any) {
+        ship.removeAllActions()
+    }
+    
+   @objc
+      func handleTap(_ gestureRecognize: UIGestureRecognizer) {
+    ship.removeAllActions()
+     print("paused")
+
+    DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+        animation(node: self.ship)
+    })
+    }
+}
+
    
-
-    
-    
-    
-
-    @objc func handlePinch(from recognizer: UIPinchGestureRecognizer){
-        print("pich started")
-        
-        if recognizer.state == .changed {
-            guard let sceneview = recognizer.view as? SCNView else{
-                return
-            }
-            let touch = recognizer.location(in: sceneview)
-            let hittestResult = self.sceneview.hitTest(touch, options: nil)
-            if let hitTest = hittestResult.first {
-                let rootnode = hitTest.node
-                let pinchScaleX = Float(recognizer.scale) * rootnode.scale.x
-                 let pinchScaleY = Float(recognizer.scale) * rootnode.scale.y
-                 let pinchScaleZ = Float(recognizer.scale) * rootnode.scale.z
-                rootnode.scale = SCNVector3(pinchScaleX,pinchScaleY,pinchScaleZ)
-                recognizer.scale = 1
-            }
-        }
-//      var pinchScale = recognizer.scale
-//      pinchScale = round(pinchScale * 1000) / 1000.0
-//
-//      sceneview.scene!.rootNode.enumerateChildNodes { (node, stop) -> Void in
-//        if(node.name == "CruzV2"){
-//            node.scale = SCNVector3(x: Float(pinchScale), y: Float(pinchScale), z: Float(pinchScale))
-//        }
-//      }
-    }
-    
-    }
-
-    func addAnimation(node: SCNNode) {
-        let rotateOne = SCNAction.rotate(by: 50.0, around: SCNVector3(0.0, 10.0,0.0), duration: 40)
-        let waitAction = SCNAction.wait(duration: 10)
-        let hoverSequence = SCNAction.sequence([rotateOne,waitAction,rotateOne])
-       let loopSequence = SCNAction.repeatForever(hoverSequence)
-        node.runAction(loopSequence)
-       
-    }
-    
     
 
     func nodeFromResource(assetName: String, extensionName: String) -> SCNNode {
@@ -181,6 +145,15 @@ class SceneViewController: UIViewController {
         node.load()
         return node
     }
+   func animation(node: SCNNode){
+    let rotateOne = SCNAction.rotate(by: 50.0, around: SCNVector3(0.0, 10.0,0.0), duration: 20)
+     let waitAction = SCNAction.wait(duration: 5)
+     let hoverSequence = SCNAction.sequence([rotateOne,waitAction,rotateOne])
+     let loopSequence = SCNAction.repeatForever(hoverSequence)
+     node.runAction(loopSequence)
+    
+}
+
     
 
 

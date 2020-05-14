@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2305D285242360D300E0D118 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2305D284242360D300E0D118 /* CardView.swift */; };
+		233DB6FC246C1E280001BD8E /* Scalling360ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233DB6FB246C1E280001BD8E /* Scalling360ViewModel.swift */; };
 		238B5D65244856C600AC8EC1 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 238B5D64244856C600AC8EC1 /* art.scnassets */; };
 		238D84592445E75B00CBBB85 /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 238D84582445E75B00CBBB85 /* texture.png */; };
-		238D849D2445F6BA00CBBB85 /* CruzV2.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 238D849C2445F6B900CBBB85 /* CruzV2.usdz */; };
 		23AC8DE42439E5AB00A59787 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC8DE32439E5AB00A59787 /* SceneViewController.swift */; };
 		23B3D9BB2445DD4E006DBED0 /* converse_model in Resources */ = {isa = PBXBuildFile; fileRef = 23B3D9BA2445DD4E006DBED0 /* converse_model */; };
 		23B3D9BF2445DDB0006DBED0 /* ship.scn in Resources */ = {isa = PBXBuildFile; fileRef = 23B3D9BE2445DDB0006DBED0 /* ship.scn */; };
@@ -38,9 +38,9 @@
 /* Begin PBXFileReference section */
 		117E73B218C1FBAFAB2CA1B0 /* Pods_ArRetailStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArRetailStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2305D284242360D300E0D118 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = "../../MyAcuvueProject/myacuvue-ios/MyAcuvueMain/Controllers/CardView.swift"; sourceTree = "<group>"; };
+		233DB6FB246C1E280001BD8E /* Scalling360ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scalling360ViewModel.swift; sourceTree = "<group>"; };
 		238B5D64244856C600AC8EC1 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		238D84582445E75B00CBBB85 /* texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = texture.png; path = "../../ARPlaneDetector-Part1/ARPlaneDetector/art.scnassets/texture.png"; sourceTree = "<group>"; };
-		238D849C2445F6B900CBBB85 /* CruzV2.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; name = CruzV2.usdz; path = ../../../../../Downloads/CruzV2.usdz; sourceTree = "<group>"; };
 		23AC8DE32439E5AB00A59787 /* SceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		23B3D9BA2445DD4E006DBED0 /* converse_model */ = {isa = PBXFileReference; lastKnownFileType = folder; name = converse_model; path = ../../scenekittest/SceneKitTest/converse_model; sourceTree = "<group>"; };
 		23B3D9BE2445DDB0006DBED0 /* ship.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = ship.scn; path = "../../ARPlaneDetector-Part1/ARPlaneDetector/art.scnassets/ship.scn"; sourceTree = "<group>"; };
@@ -127,7 +127,6 @@
 				FD2DC3912418E26500E6C215 /* Assets.xcassets */,
 				FD2DC3932418E26500E6C215 /* LaunchScreen.storyboard */,
 				FD2DC39C2418E29F00E6C215 /* planets.json */,
-				238D849C2445F6B900CBBB85 /* CruzV2.usdz */,
 				FD2DC3A62418EF6800E6C215 /* SwiftyJSON.swift */,
 				FD2DC3962418E26500E6C215 /* Info.plist */,
 				FD2DC38E2418E26400E6C215 /* ArRetailStore.xcdatamodeld */,
@@ -141,6 +140,7 @@
 				FD5000BB241B94A70009811F /* UIColor+hexcolor.swift */,
 				FD9F7D71241A82C000A84E2F /* ProductDetailListController.swift */,
 				23AC8DE32439E5AB00A59787 /* SceneViewController.swift */,
+				233DB6FB246C1E280001BD8E /* Scalling360ViewModel.swift */,
 				238B5D64244856C600AC8EC1 /* art.scnassets */,
 			);
 			path = ArRetailStore;
@@ -220,7 +220,6 @@
 				238B5D65244856C600AC8EC1 /* art.scnassets in Resources */,
 				238D84592445E75B00CBBB85 /* texture.png in Resources */,
 				FD2DC3922418E26500E6C215 /* Assets.xcassets in Resources */,
-				238D849D2445F6BA00CBBB85 /* CruzV2.usdz in Resources */,
 				23B3D9BF2445DDB0006DBED0 /* ship.scn in Resources */,
 				FD2DC38D2418E26400E6C215 /* Main.storyboard in Resources */,
 				FD2DC39D2418E29F00E6C215 /* planets.json in Resources */,
@@ -290,6 +289,7 @@
 				FD2DC3882418E26400E6C215 /* SceneDelegate.swift in Sources */,
 				FD9F7D72241A82C000A84E2F /* ProductDetailListController.swift in Sources */,
 				FD2DC3A72418EF6800E6C215 /* SwiftyJSON.swift in Sources */,
+				233DB6FC246C1E280001BD8E /* Scalling360ViewModel.swift in Sources */,
 				FD5000B8241B8FE30009811F /* UISliderNavigationController.swift in Sources */,
 				FD2DC3902418E26400E6C215 /* ArRetailStore.xcdatamodeld in Sources */,
 				FD9F7D70241A4C6400A84E2F /* ProductModel.swift in Sources */,
@@ -438,6 +438,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ArRetailStore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -456,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ArRetailStore/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
