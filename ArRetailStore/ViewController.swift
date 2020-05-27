@@ -141,7 +141,7 @@ extension ViewController {
                  do{
                      let fileURL = URL(fileURLWithPath: filepath)
                      let jsonData = try Data(contentsOf: fileURL , options: .mappedIfSafe )
-                   let jsonEntry = JSON(jsonData)
+                     let jsonEntry = JSON(jsonData)
                      let sections = jsonEntry["sections"].array!
                     
                      for section in sections{ // tre.. /fur // elect
@@ -156,6 +156,8 @@ extension ViewController {
                             
                             var productName = ""
                             var productPrice = ""
+                            var modelPath = ""
+                            var Extension = ""
                            
                             print(item)
                              print(productPrice)
@@ -164,6 +166,19 @@ extension ViewController {
                             }else{
                                 productPrice = "121"
                             }
+                            if let model = item["parameter"]["model"].string {
+                                modelPath = model
+                            }else{
+                                modelPath = ""
+                            }
+                            if let Extensionfile = item["parameter"]["extension"].string{
+                                Extension = Extensionfile
+                            }else{
+                                Extension = ""
+                            }
+                            
+                            
+                           
                            
                             
                              if let name = item["parameter"]["name"].string{
@@ -176,7 +191,7 @@ extension ViewController {
                                 productName = title
 
                              }
-                            productModel.append(ProductModel(ProductName: productName, ProductImage: image, ProductPrice: productPrice))
+                            productModel.append(ProductModel(ProductName: productName, ProductImage: image, ProductPrice: productPrice,ModelPath: modelPath,Extension: Extension))
                             
                          }
                          let jsonElement = jsonBasedModel(header: heading, productModel: productModel)

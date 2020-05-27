@@ -10,10 +10,8 @@
 		2305D285242360D300E0D118 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2305D284242360D300E0D118 /* CardView.swift */; };
 		233DB6FC246C1E280001BD8E /* Scalling360ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233DB6FB246C1E280001BD8E /* Scalling360ViewModel.swift */; };
 		238B5D65244856C600AC8EC1 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 238B5D64244856C600AC8EC1 /* art.scnassets */; };
-		238D84592445E75B00CBBB85 /* texture.png in Resources */ = {isa = PBXBuildFile; fileRef = 238D84582445E75B00CBBB85 /* texture.png */; };
 		23AC8DE42439E5AB00A59787 /* SceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AC8DE32439E5AB00A59787 /* SceneViewController.swift */; };
 		23B3D9BB2445DD4E006DBED0 /* converse_model in Resources */ = {isa = PBXBuildFile; fileRef = 23B3D9BA2445DD4E006DBED0 /* converse_model */; };
-		23B3D9BF2445DDB0006DBED0 /* ship.scn in Resources */ = {isa = PBXBuildFile; fileRef = 23B3D9BE2445DDB0006DBED0 /* ship.scn */; };
 		B59003100467E2B29A5ED948 /* Pods_ArRetailStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 117E73B218C1FBAFAB2CA1B0 /* Pods_ArRetailStore.framework */; };
 		FD2DC3862418E26400E6C215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DC3852418E26400E6C215 /* AppDelegate.swift */; };
 		FD2DC3882418E26400E6C215 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2DC3872418E26400E6C215 /* SceneDelegate.swift */; };
@@ -40,10 +38,8 @@
 		2305D284242360D300E0D118 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardView.swift; path = "../../MyAcuvueProject/myacuvue-ios/MyAcuvueMain/Controllers/CardView.swift"; sourceTree = "<group>"; };
 		233DB6FB246C1E280001BD8E /* Scalling360ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scalling360ViewModel.swift; sourceTree = "<group>"; };
 		238B5D64244856C600AC8EC1 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		238D84582445E75B00CBBB85 /* texture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = texture.png; path = "../../ARPlaneDetector-Part1/ARPlaneDetector/art.scnassets/texture.png"; sourceTree = "<group>"; };
 		23AC8DE32439E5AB00A59787 /* SceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneViewController.swift; sourceTree = "<group>"; };
 		23B3D9BA2445DD4E006DBED0 /* converse_model */ = {isa = PBXFileReference; lastKnownFileType = folder; name = converse_model; path = ../../scenekittest/SceneKitTest/converse_model; sourceTree = "<group>"; };
-		23B3D9BE2445DDB0006DBED0 /* ship.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; name = ship.scn; path = "../../ARPlaneDetector-Part1/ARPlaneDetector/art.scnassets/ship.scn"; sourceTree = "<group>"; };
 		3AE11B56384AF5FE19479FA3 /* Pods-ArRetailStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArRetailStore.release.xcconfig"; path = "Target Support Files/Pods-ArRetailStore/Pods-ArRetailStore.release.xcconfig"; sourceTree = "<group>"; };
 		847ABF8A62556C1CE5736354 /* Pods-ArRetailStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArRetailStore.debug.xcconfig"; path = "Target Support Files/Pods-ArRetailStore/Pods-ArRetailStore.debug.xcconfig"; sourceTree = "<group>"; };
 		FD2DC3822418E26400E6C215 /* ArRetailStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArRetailStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,8 +126,6 @@
 				FD2DC3A62418EF6800E6C215 /* SwiftyJSON.swift */,
 				FD2DC3962418E26500E6C215 /* Info.plist */,
 				FD2DC38E2418E26400E6C215 /* ArRetailStore.xcdatamodeld */,
-				23B3D9BE2445DDB0006DBED0 /* ship.scn */,
-				238D84582445E75B00CBBB85 /* texture.png */,
 				FD2DC3A42418EBBB00E6C215 /* JsonModel.swift */,
 				2305D284242360D300E0D118 /* CardView.swift */,
 				FD5000B7241B8FE30009811F /* UISliderNavigationController.swift */,
@@ -218,9 +212,7 @@
 			files = (
 				FD2DC3952418E26500E6C215 /* LaunchScreen.storyboard in Resources */,
 				238B5D65244856C600AC8EC1 /* art.scnassets in Resources */,
-				238D84592445E75B00CBBB85 /* texture.png in Resources */,
 				FD2DC3922418E26500E6C215 /* Assets.xcassets in Resources */,
-				23B3D9BF2445DDB0006DBED0 /* ship.scn in Resources */,
 				FD2DC38D2418E26400E6C215 /* Main.storyboard in Resources */,
 				FD2DC39D2418E29F00E6C215 /* planets.json in Resources */,
 				23B3D9BB2445DD4E006DBED0 /* converse_model in Resources */,

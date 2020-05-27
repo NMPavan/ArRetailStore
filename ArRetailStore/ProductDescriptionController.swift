@@ -14,6 +14,7 @@ class ProductDescriptionController: UISliderNavigationController {
     //var listObject  = jsonBasedModel.self
    var selectedPost: ProductModel!
     
+ 
     
     
     @IBOutlet weak var ProductName: UILabel!
@@ -44,13 +45,21 @@ class ProductDescriptionController: UISliderNavigationController {
     }
     
     
-    @IBAction func RotationWindow(_ sender: Any) {
+    @IBAction func ThreeDView(_ sender: Any) {
+        
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SceneKit") as? SceneViewController
-               self.navigationController?.pushViewController(vc!, animated: true)
-               print("it is inside scenekit")
+        vc?.selectedPost = selectedPost
+                     self.navigationController?.pushViewController(vc!, animated: true)
+                     print("it is inside scenekit")
+    }
+    
+    
+    @IBAction func RotationWindow(_ sender: Any) {
+      
                
                
     }
+    
     
     @IBAction func SceneView(_ sender: Any) {
         

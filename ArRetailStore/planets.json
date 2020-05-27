@@ -1,29 +1,39 @@
 {
-"sections": [{
-        "title": "TrendingSpecials",
+"sections": [
+    
+    {
+        "title": "Trending Specials",
         "sort_order": "1",
         "type": "general",
         "items": [{
+            
+            
                 "sort_order": "1",
                 "type": "product",
                 "parameter": {
                     "entity_id": "14",
-                    "name": "Glasses",
-                    "image_url": "ic_yellow_glasses",
+                    "name": "Pianono",
+                    "image_url": "pianono",
                     "price":"20100",
+                    "model":"shipFolder/watch",
+                    "extension":"dae"
                     
                    
                     
                 }
             },
+        
+        
             {
                 "sort_order": "2",
                 "type": "general",
                 "parameter": {
                     "entity_id": "238",
-                    "name": "Table Fan",
-                    "image_url": "ic_fan",
-                       "price":"10100"
+                    "name": "Computer",
+                    "image_url": "computer",
+                       "price":"10100",
+                       "model":"shipFolder/Computer",
+                          "extension":"usdz"
                      
                 }
             },
@@ -32,9 +42,11 @@
                 "type": "general",
                 "parameter": {
                     "entity_id": "141",
-                    "name": "Wardrobe",
-                    "image_url": "ic_furniture_10",
-                       "price":"10100"
+                    "name": "Chair",
+                    "image_url": "chair",
+                       "price":"10100",
+                       "model":"shipFolder/Chair",
+                          "extension":"usdz"
                      
                 }
             },
@@ -43,9 +55,11 @@
                 "type": "general",
                 "parameter": {
                     "entity_id": "141",
-                    "name": "Headphones",
-                    "image_url": "ic_electronics_3",
-                       "price":"10100"
+                    "name": "Laptop",
+                    "image_url": "laptop",
+                       "price":"10100",
+                       "model":"shipFolder/Laptop",
+                          "extension":"usdz"
                     
                 }
             },
@@ -56,7 +70,9 @@
                     "entity_id": "18",
                     "name": "Laptop with AMD",
                     "image_url": "ic_electronics_6",
-                       "price":"10100"
+                       "price":"10100",
+                       "model":"shipFolder/Laptop",
+                          "extension":"usdz"
                      
                 }
             },{
@@ -66,7 +82,9 @@
                     "entity_id": "18",
                     "name": "Iphone 11 pro",
                     "image_url": "ic_electronics_6",
-                       "price":"10100"
+                       "price":"10100",
+                       "model":"shipFolder/Computer",
+                          "extension":"usdz"
                    
                 }
             },
@@ -77,7 +95,9 @@
                           "entity_id": "18",
                           "name": "Google Pixel 3a",
                           "image_url": "ic_electronics_7",
-                             "price":"10100"
+                          "price":"10100",
+                          "model":"shipFolder/Laptop",
+                             "extension":"usdz"
                            
                       }
                   }
@@ -94,8 +114,10 @@
             "parameter": {
                 "entity_id": "14",
                 "name": "Sofa set",
-                "image_url": "ic_furniture_1",
-                   "price":"10100"
+                "image_url": "chair",
+                   "price":"10100",
+                   "model":"shipFolder/Chair",
+                      "extension":"usdz"
                 
             }
         },
@@ -106,7 +128,9 @@
                 "entity_id": "238",
                 "name": "Sofa Chair Blue",
                 "image_url": "ic_furniture_2",
-                   "price":"10100"
+                   "price":"10100",
+                   "model":"shipFolder/model",
+                      "extension":"usdz"
                   
             }
         },
@@ -117,7 +141,9 @@
                 "entity_id": "15",
                 "name": "Dining Table",
                 "image_url": "ic_furniture_4",
-                   "price":"10100"
+                   "price":"10100",
+                   "model":"shipFolder/Chair",
+                      "extension":"usdz"
                  
             }
         },
@@ -128,7 +154,9 @@
                 "entity_id": "141",
                 "name": "Wardrobe",
                 "image_url": "ic_furniture_10",
-                   "price":"10100"
+                   "price":"10100",
+                   "model":"shipFolder/Chair",
+                      "extension":"usdz"
                 
             }
         },
@@ -138,7 +166,10 @@
             "parameter": {
                 "entity_id": "18",
                 "name": "Study table",
-                "image_url": "ic_furniture_11",   "price":"10100"
+                "image_url": "ic_furniture_11",
+                "price":"10100",
+                "model":"shipFolder/Chair",
+                   "extension":"usdz"
                  
             }
         },
@@ -149,7 +180,9 @@
                 "entity_id": "18",
                 "name": "Iphone 11 pro",
                 "image_url": "ic_electronics_6",
-                   "price":"10100"
+                   "price":"10100",
+                   "model":"shipFolder/Computer",
+                      "extension":"usdz"
                
             }
         },
@@ -160,7 +193,9 @@
                       "entity_id": "18",
                       "name": "Google Pixel 3a",
                       "image_url": "ic_electronics_7",
-                         "price":"10100"
+                         "price":"10100",
+                         "model":"shipFolder/Computer",
+                            "extension":"usdz"
                       
                   }
               }
@@ -177,9 +212,11 @@
             "type": "product",
             "parameter": {
                 "entity_id": "14",
-                "name": "T shirt",
-                "image_url": "ic_fashion_1",
-                   "price":"10100"
+                "name": "Shoe",
+                "image_url": "ic_fashion_11",
+                   "price":"10100",
+                   "model":"shipFolder/CruzV2",
+                      "extension":"usdz"
                  
             }
         },
@@ -189,8 +226,10 @@
             "parameter": {
                 "entity_id": "238",
                 "name": "Brown Formal",
-                "image_url": "ic_fashion_11",
-                   "price":"10100"
+                "image_url": "ic_fashion_13",
+                   "price":"10100",
+                   "model":"shipFolder/Computer",
+                      "extension":"usdz"
                  
             }
         },
@@ -200,8 +239,10 @@
             "parameter": {
                 "entity_id": "15",
                 "name": "Black and white",
-                "image_url": "ic_fashion_13",
-                   "price":"10100"
+                "image_url": "ic_fashion_11",
+                   "price":"10100",
+                   "model":"shipFolder/Computer",
+                      "extension":"usdz"
                 
             }
         },
@@ -212,7 +253,9 @@
                 "entity_id": "141",
                 "name": "Green shoes",
                 "image_url": "ic_fashion_14",
-                   "price":"10100"
+                   "price":"10100",
+                   "model":"shipFolder/Computer",
+                      "extension":"usdz"
                 
                             }
         },
@@ -223,7 +266,9 @@
                 "entity_id": "18",
                 "name": "Shoes in orange",
                 "image_url": "ic_fashion_15",
-                   "price":"10100"
+                   "price":"10100",
+                   "model":"shipFolder/Computer",
+                      "extension":"usdz"
                
             }
         },
@@ -234,7 +279,9 @@
                       "entity_id": "18",
                       "name": "Dress Flower",
                       "image_url": "ic_fashion_20",
-                         "price":"10100"
+                         "price":"10100",
+                         "model":"shipFolder/Computer",
+                            "extension":"usdz"
                      
                   }
               }
@@ -251,7 +298,9 @@
                 "entity_id": "14",
                 "name": "Table Fan",
                 "image_url": "ic_fan",
-                   "price":"10100"
+                   "price":"10100",
+                   "model":"shipFolder/Computer",
+                      "extension":"usdz"
              
             }
         },
@@ -261,7 +310,9 @@
             "parameter": {
                 "entity_id": "238",
                 "name": "Laptop with AMD",
-                "image_url": "ic_electronics_2",   "price":"10100"
+                "image_url": "ic_electronics_2",   "price":"10100",
+                "model":"shipFolder/Laptop",
+                   "extension":"usdz"
                  
             }
         },
@@ -272,7 +323,9 @@
                 "entity_id": "15",
                 "name": "Microwave",
                 "image_url": "ic_microwave",
-                   "price":"10100"
+                   "price":"10100",
+                   "model":"shipFolder/Computer",
+                      "extension":"usdz"
                   
             }
         },
@@ -283,7 +336,9 @@
                 "entity_id": "141",
                 "name": "Laptop with Intel",
                 "image_url": "ic_electronics_4",
-                   "price":"10100"
+                   "price":"10100",
+                   "model":"shipFolder/Computer",
+                      "extension":"usdz"
                  
             }
         },
@@ -294,7 +349,9 @@
                 "entity_id": "18",
                 "name": "Iphone 11 pro",
                 "image_url": "ic_electronics_6",
-                  "price":"2000"
+                  "price":"2000",
+                  "model":"shipFolder/Laptop",
+                     "extension":"usdz"
             }
         },
         {
@@ -304,7 +361,9 @@
                       "entity_id": "18",
                       "name": "Google Pixel 3a",
                       "image_url": "ic_electronics_7",
-                         "price":"11100"
+                         "price":"11100",
+                         "model":"shipFolder/Computer",
+                            "extension":"usdz"
                         
                   }
               }

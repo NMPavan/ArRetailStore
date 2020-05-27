@@ -14,6 +14,7 @@ class SceneViewController: UIViewController {
     
      var ship = SCNNode()
      let scene = SCNScene()
+     
 
     @IBOutlet weak var sceneview: SCNView!
     override func viewDidLoad() {
@@ -27,13 +28,13 @@ class SceneViewController: UIViewController {
                     scene.rootNode.addChildNode(cameraNode)
                     
                     // place the camera
-                    cameraNode.position = SCNVector3(x: 0, y: 0, z: 70)
+                    cameraNode.position = SCNVector3(x: 0, y: 0, z: 5)
                     
                     // create and add a light to the scene
                     let lightNode = SCNNode()
                     lightNode.light = SCNLight()
                     lightNode.light!.type = .omni
-                    lightNode.position = SCNVector3(x: 0, y: 0, z: 70)
+                    lightNode.position = SCNVector3(x: 0, y: 0, z: 25)
                     scene.rootNode.addChildNode(lightNode)
                     
                     // create and add an ambient light to the scene
@@ -56,14 +57,24 @@ class SceneViewController: UIViewController {
                     // configure the view
                     sceneview.backgroundColor = UIColor.white
         
+       
         
                     
       
         
         // ******************************************************
 
-        ship = nodeFromResource(assetName: "shipFolder/CruzV2", extensionName: "usdz")
+       // ship = nodeFromResource(assetName: "shipFolder/watch", extensionName: "dae")
+        ship = nodeFromResource(assetName: selectedPost.ModelPath, extensionName: selectedPost.Extension)
+        
+
         scene.rootNode.addChildNode(ship)
+        animation(node: self.ship)
+        
+        
+        
+        
+        
         //addAnimation(node: ship)
         
        
@@ -97,8 +108,15 @@ class SceneViewController: UIViewController {
 //        bluePotion.position = SCNVector3Make(2, 1, 1)
 //        scene.rootNode.addChildNode(bluePotion)
 //        addAnimation(node: bluePotion)
+        
+        //MARK:- Tap gesture to stop Rotation
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
                sceneview.addGestureRecognizer(tapGesture)
+        
+        
+        //MARK:- Pinch gesture
+        let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(from:)))
+               self.sceneview.addGestureRecognizer(pinchGestureRecognizer)
         }
     
     
@@ -107,7 +125,7 @@ class SceneViewController: UIViewController {
     
     
     @IBAction func StartRotation(_ sender: Any) {
-        let rotateOne = SCNAction.rotate(by: 50.0, around: SCNVector3(0.0, 10.0,0.0), duration: 20)
+        let rotateOne = SCNAction.rotate(by: 50.0, around: SCNVector3(0.0, 10.0,0.0), duration: 40)
          let waitAction = SCNAction.wait(duration: 5)
          let hoverSequence = SCNAction.sequence([rotateOne,waitAction,rotateOne])
          let loopSequence = SCNAction.repeatForever(hoverSequence)
@@ -119,24 +137,65 @@ class SceneViewController: UIViewController {
     }
     
     @IBAction func StopAnimation(_ sender: Any) {
-        ship.removeAllActions()
+        
+      
+              
+        
+        
+    //ship.removeAllActions()
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    @objc func handlePinch(from recognizer: UIPinchGestureRecognizer){
+        print("pinch started")
+        
+        if recognizer.state == .changed {
+            guard let sceneview = recognizer.view as? SCNView else{
+                return
+            }
+            let touch = recognizer.location(in: sceneview)
+            let hittestResult = self.sceneview.hitTest(touch, options: nil)
+            if let hitTest = hittestResult.first {
+                let rootnode = hitTest.node
+                let pinchScaleX = Float(recognizer.scale) * rootnode.scale.x
+                 let pinchScaleY = Float(recognizer.scale) * rootnode.scale.y
+                 let pinchScaleZ = Float(recognizer.scale) * rootnode.scale.z
+                rootnode.scale = SCNVector3(pinchScaleX,pinchScaleY,pinchScaleZ)
+                recognizer.scale = 1
+            }
+        }
+
+    }
+    
+    
+    
     
    @objc
       func handleTap(_ gestureRecognize: UIGestureRecognizer) {
     ship.removeAllActions()
      print("paused")
 
+    guard let shoenode = self.ship.childNode(withName: "band", recursively: true)
+                                                  else{
+                                                      return;
+                                                  }
+                 
+             // shoenode.position = SCNVector3(0,5,10)
     DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
-        animation(node: self.ship)
+       // animation(node: self.ship)
     })
     }
 }
 
    
-    
-
-    func nodeFromResource(assetName: String, extensionName: String) -> SCNNode {
+       func nodeFromResource(assetName: String, extensionName: String) -> SCNNode {
         let url = Bundle.main.url(forResource: "art.scnassets/\(assetName)", withExtension: extensionName)!
         print(url)
         let node = SCNReferenceNode(url: url)!
@@ -145,6 +204,8 @@ class SceneViewController: UIViewController {
         node.load()
         return node
     }
+
+
    func animation(node: SCNNode){
     let rotateOne = SCNAction.rotate(by: 50.0, around: SCNVector3(0.0, 10.0,0.0), duration: 20)
      let waitAction = SCNAction.wait(duration: 5)
